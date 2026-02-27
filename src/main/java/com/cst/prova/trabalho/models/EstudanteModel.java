@@ -1,18 +1,21 @@
 package com.cst.prova.trabalho.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
+@Table (name = "tb_aluno")
 
 public class EstudanteModel {
 
     @Id
     @GeneratedValue
     private Long id;
+
+    @Column(name = "nm-Estudante")
     private String nome;
     private String email;
+
+    @Column (name = "em-Estudante")
     private Integer idade;
 
     public EstudanteModel() {
