@@ -16,9 +16,9 @@ public class EstudanteServices {
     @Autowired
     private EstudanteRepository estudanteRepository;
 
-    public EstudanteModel criarEstudante(EstudanteModel estudanteModel){return EstudanteRepository.save(EstudanteModel);}
+    public EstudanteModel criarEstudante(EstudanteModel estudanteModel){return estudanteRepository.save(estudanteModel);}
 
-    public List<EstudanteModel>  ListarTodosEstudantes(){return EstudanteRepository.findAll();}
+    public List<EstudanteModel>  ListarTodosEstudantes(){return estudanteRepository.findAll();}
 
     public void deletarAluno(Long id){
         estudanteRepository.deleteById(id);
