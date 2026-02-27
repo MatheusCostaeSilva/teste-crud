@@ -20,7 +20,7 @@ public class EstudanteServices {
 
     public List<EstudanteModel>  ListarTodosEstudantes(){return estudanteRepository.findAll();}
 
-    public void deletarAluno(Long id){
+    public void deletarEstudante(Long id){
         estudanteRepository.deleteById(id);
     }
 
